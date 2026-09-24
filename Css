@@ -1,42 +1,22 @@
-/* ============================================================
-   NEURODIVERGÊNCIA — ESTILO DA INTERFACE
-   ============================================================ */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --fundo: #f5f7fb;
-    --branco: #ffffff;
-    --texto: #18202a;
-    --texto-secundario: #667085;
-    --borda: #e4e7ec;
-    --principal: #263238;
-    --principal-hover: #37474f;
-    --selecionado: #eef2f5;
-    --barra: #263238;
-    --sombra: 0 10px 35px rgba(16, 24, 40, 0.08);
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--fundo);
-    color: var(--texto);
+    background: #f4f6f8;
+    color: #20242a;
     min-height: 100vh;
 }
 
-
-/* ============================================================
-   CABEÇALHO
-   ============================================================ */
+/* CABEÇALHO */
 
 header {
-    background: var(--branco);
-    border-bottom: 1px solid var(--borda);
-    padding: 24px 7%;
+    background: white;
+    padding: 28px 8%;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .logo {
@@ -50,21 +30,19 @@ header {
 }
 
 header p {
-    margin-top: 7px;
-    color: var(--texto-secundario);
+    margin-top: 6px;
+    color: #68717d;
     font-size: 15px;
 }
 
 
-/* ============================================================
-   CONTEÚDO
-   ============================================================ */
+/* ÁREA PRINCIPAL */
 
 main {
     width: 100%;
-    max-width: 960px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 55px 20px;
+    padding: 60px 20px;
 }
 
 .tela {
@@ -76,99 +54,84 @@ main {
 }
 
 
-/* ============================================================
-   CARTÕES
-   ============================================================ */
+/* CARTÕES */
 
 .card {
-    background: var(--branco);
-    border: 1px solid var(--borda);
-    border-radius: 20px;
-    padding: 38px;
-    margin-bottom: 25px;
-    box-shadow: var(--sombra);
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 18px;
+    padding: 36px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
 }
 
 .principal {
     text-align: center;
-    padding: 75px 55px;
+    padding: 70px 45px;
 }
 
 .principal h1 {
-    max-width: 720px;
-    margin: 0 auto 20px;
-    font-size: 44px;
-    line-height: 1.12;
-    letter-spacing: -1.5px;
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
 }
 
 .principal p {
-    max-width: 680px;
-    margin: 0 auto 35px;
-    color: var(--texto-secundario);
-    font-size: 17px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #626b76;
     line-height: 1.7;
+    font-size: 17px;
 }
 
 h2 {
-    font-size: 28px;
-    line-height: 1.25;
-    margin-bottom: 10px;
+    font-size: 27px;
+    margin-bottom: 8px;
 }
 
 .descricao {
-    color: var(--texto-secundario);
-    line-height: 1.6;
+    color: #6b7280;
     margin-bottom: 28px;
 }
 
 
-/* ============================================================
-   FORMULÁRIO
-   ============================================================ */
+/* FORMULÁRIO */
 
 label {
     display: block;
-    margin: 20px 0 8px;
-    font-size: 14px;
     font-weight: 600;
+    margin: 18px 0 8px;
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 14px 15px;
-    border: 1px solid #d0d5dd;
-    border-radius: 11px;
-    background: #ffffff;
-    color: var(--texto);
-    font-family: inherit;
+    border: 1px solid #d6dbe1;
+    border-radius: 10px;
+    padding: 13px 14px;
     font-size: 15px;
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    background: white;
 }
 
 input:focus,
 textarea:focus {
-    border-color: #667085;
-    box-shadow: 0 0 0 3px rgba(102, 112, 133, 0.10);
+    border-color: #59636e;
 }
 
 textarea {
-    min-height: 105px;
+    min-height: 100px;
     resize: vertical;
 }
 
 .linha {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 18px;
 }
 
 
-/* ============================================================
-   BOTÕES
-   ============================================================ */
+/* BOTÕES */
 
 button {
     width: 100%;
@@ -176,226 +139,143 @@ button {
     border-radius: 11px;
     padding: 15px 20px;
     margin-top: 28px;
-    background: var(--principal);
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    background: #20242a;
+    color: white;
+    transition: 0.2s;
 }
 
 button:hover {
-    background: var(--principal-hover);
     transform: translateY(-1px);
-    box-shadow: 0 5px 15px rgba(16, 24, 40, 0.12);
-}
-
-button:disabled {
-    background: #c5cbd1;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
+    opacity: 0.9;
 }
 
 
-/* ============================================================
-   AVALIAÇÃO
-   ============================================================ */
+/* AVALIAÇÃO */
 
 .topo-avaliacao {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 14px;
-    color: var(--texto-secundario);
+    color: #68717d;
     font-size: 14px;
-}
-
-#estrategia {
-    font-weight: 600;
-    color: var(--texto);
+    margin-bottom: 14px;
 }
 
 .barra {
     width: 100%;
-    height: 9px;
-    margin-bottom: 35px;
-    background: #e9edf2;
-    border-radius: 50px;
+    height: 8px;
+    background: #e9edf1;
+    border-radius: 20px;
     overflow: hidden;
+    margin-bottom: 35px;
 }
 
 #progresso {
-    width: 4%;
     height: 100%;
-    background: var(--barra);
-    border-radius: 50px;
-    transition: width 0.3s ease;
+    width: 4%;
+    background: #20242a;
+    transition: width 0.3s;
 }
 
 #pergunta {
-    font-size: 25px;
-    line-height: 1.45;
+    font-size: 24px;
+    line-height: 1.4;
     margin-bottom: 25px;
 }
 
-
-/* ============================================================
-   ALTERNATIVAS
-   ============================================================ */
-
 .alternativa {
-    display: block;
     width: 100%;
-    padding: 17px 18px;
+    padding: 17px;
     margin: 10px 0;
-    border: 1px solid #d8dde3;
-    border-radius: 12px;
-    background: #ffffff;
-    color: var(--texto);
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 500;
+    border: 1px solid #d8dde2;
+    border-radius: 11px;
+    background: white;
+    color: #20242a;
     text-align: left;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: 0.2s;
 }
 
 .alternativa:hover {
-    background: #f8fafc;
-    border-color: #aeb6bf;
-    transform: translateY(-1px);
+    background: #f4f6f8;
 }
 
 .alternativa.selecionada {
-    background: var(--selecionado);
-    border-color: #263238;
-    box-shadow: 0 0 0 2px rgba(38, 50, 56, 0.08);
+    border-color: #20242a;
+    background: #eef0f2;
 }
-
-
-/* ============================================================
-   DIFICULDADE
-   ============================================================ */
 
 .dificuldade {
-    margin-top: 32px;
-    padding-top: 25px;
-    border-top: 1px solid var(--borda);
-}
-
-.dificuldade label {
-    margin-top: 0;
+    margin-top: 30px;
 }
 
 input[type="range"] {
     padding: 0;
     margin-top: 10px;
-    height: 6px;
-    accent-color: var(--principal);
-    cursor: pointer;
 }
 
 .escala {
     display: flex;
     justify-content: space-between;
-    margin-top: 7px;
-    color: var(--texto-secundario);
-    font-size: 12px;
+    color: #737b85;
+    font-size: 13px;
+    margin-top: 5px;
 }
 
 
-/* ============================================================
-   RESULTADOS
-   ============================================================ */
+/* RESULTADOS */
 
 .resultados {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 28px;
+    margin-top: 25px;
 }
 
 .resultado-item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    min-height: 70px;
-    padding: 17px 18px;
-    border: 1px solid var(--borda);
-    border-radius: 13px;
-    background: #fafbfc;
-}
-
-.resultado-item span {
-    color: var(--texto-secundario);
-    font-size: 14px;
+    align-items: center;
+    padding: 18px;
+    border: 1px solid #e1e5e9;
+    border-radius: 11px;
+    margin-bottom: 10px;
 }
 
 .resultado-item strong {
-    font-size: 20px;
-    color: var(--texto);
+    font-size: 18px;
 }
 
 
-/* ============================================================
-   MENSAGEM DO RESULTADO
-   ============================================================ */
-
-#mensagemResultado {
-    color: var(--texto-secundario);
-    line-height: 1.7;
-    margin-top: 15px;
-}
-
-#mensagemResultado strong {
-    color: var(--texto);
-}
-
-
-/* ============================================================
-   ATIVIDADES
-   ============================================================ */
-
-#atividades {
-    margin-top: 25px;
-}
+/* ATIVIDADES */
 
 #listaAtividades {
-    margin-top: 18px;
-    color: var(--texto-secundario);
+    margin-top: 20px;
     line-height: 1.7;
+    color: #555e68;
 }
 
 
-/* ============================================================
-   RODAPÉ
-   ============================================================ */
+/* RODAPÉ */
 
 footer {
-    padding: 30px 20px;
-    border-top: 1px solid var(--borda);
-    background: #ffffff;
-    color: #7a838e;
     text-align: center;
+    padding: 25px 20px;
+    color: #7a838e;
     font-size: 13px;
 }
 
 
-/* ============================================================
-   RESPONSIVIDADE
-   ============================================================ */
+/* CELULAR */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
     header {
         padding: 22px 20px;
     }
 
     .logo {
-        font-size: 26px;
+        font-size: 25px;
     }
 
     main {
@@ -403,20 +283,15 @@ footer {
     }
 
     .card {
-        padding: 27px 20px;
-        border-radius: 16px;
+        padding: 25px 20px;
     }
 
     .principal {
-        padding: 50px 22px;
+        padding: 45px 25px;
     }
 
     .principal h1 {
-        font-size: 34px;
-    }
-
-    .principal p {
-        font-size: 16px;
+        font-size: 32px;
     }
 
     .linha {
@@ -424,39 +299,9 @@ footer {
         gap: 0;
     }
 
-    .resultados {
-        grid-template-columns: 1fr;
-    }
-
     .topo-avaliacao {
         flex-direction: column;
         align-items: flex-start;
-        gap: 7px;
-    }
-
-    #pergunta {
-        font-size: 22px;
-    }
-}
-
-
-@media (max-width: 430px) {
-
-    .principal h1 {
-        font-size: 29px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    .card {
-        padding: 23px 17px;
-    }
-
-    .resultado-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+        gap: 6px;
     }
 }
