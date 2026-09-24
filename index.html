@@ -4,549 +4,559 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="google-site-verification"
-          content="QsWhrVmL5qp7iRYZcI0Gh3hKRm4E3P6oSJDpAJ4_NCo">
+    <meta
+        name="description"
+        content="NeurodivergêncIA — Avaliação personalizada de estratégias pedagógicas com inteligência artificial."
+    >
 
     <title>NeurodivergêncIA</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<header class="cabecalho">
-    <div class="logo">
-        Neurodivergênc<span>IA</span>
-    </div>
-
-    <p>
-        Avaliação de estratégias pedagógicas personalizada
-    </p>
-</header>
-
-
-<main>
-
-    <!-- ================================================= -->
-    <!-- INÍCIO -->
-    <!-- ================================================= -->
-
-    <section id="inicio" class="tela ativa">
-
-        <div class="card principal">
-
-            <div class="icone">IA</div>
-
-            <h1>
-                Aprender de uma forma que faça sentido.
-            </h1>
-
-            <p>
-                A NeurodivergêncIA utiliza inteligência artificial
-                para analisar diferentes estratégias pedagógicas
-                e identificar quais apresentam melhor desempenho
-                para cada estudante.
-            </p>
-
-            <button
-                class="btn principal-btn"
-                onclick="mostrarTela('configuracao')">
-                Começar avaliação
-            </button>
-
+    <header class="topo">
+        <div class="marca">
+            <span class="marca-nome">Neurodivergênc<span>IA</span></span>
+            <span class="marca-subtitulo">Tecnologia para uma aprendizagem mais personalizada</span>
         </div>
+    </header>
 
-    </section>
+    <main>
 
+        <!-- =====================================================
+             TELA 1 — INÍCIO
+        ====================================================== -->
 
-    <!-- ================================================= -->
-    <!-- CONFIGURAÇÃO -->
-    <!-- ================================================= -->
+        <section id="inicio" class="tela ativa">
 
-    <section id="configuracao" class="tela">
+            <div class="hero">
 
-        <div class="card">
+                <div class="hero-badge">IA</div>
 
-            <div class="cabecalho-card">
+                <h1>
+                    Aprender de uma forma
+                    <span>que faça sentido.</span>
+                </h1>
 
-                <span class="numero-etapa">
-                    01
-                </span>
+                <p>
+                    A NeurodivergêncIA utiliza inteligência artificial
+                    para analisar diferentes estratégias pedagógicas
+                    e identificar quais apresentam melhor desempenho
+                    para cada estudante.
+                </p>
 
-                <div>
-                    <h2>Configuração da avaliação</h2>
-
-                    <p>
-                        Informe os dados necessários para
-                        personalizar as atividades.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="formulario">
-
-                <div class="campo">
-
-                    <label for="nome">
-                        Nome do estudante
-                    </label>
-
-                    <input
-                        id="nome"
-                        type="text"
-                        placeholder="Digite o nome">
-
-                </div>
-
-
-                <div class="duas-colunas">
-
-                    <div class="campo">
-
-                        <label for="idade">
-                            Idade
-                        </label>
-
-                        <input
-                            id="idade"
-                            type="number"
-                            min="1"
-                            max="100"
-                            placeholder="Ex.: 13">
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label for="ano">
-                            Ano escolar
-                        </label>
-
-                        <input
-                            id="ano"
-                            type="text"
-                            placeholder="Ex.: 7º ano">
-
-                    </div>
-
-                </div>
-
-
-                <div class="campo">
-
-                    <label for="materia">
-                        Matéria *
-                    </label>
-
-                    <input
-                        id="materia"
-                        type="text"
-                        placeholder="Ex.: Matemática">
-
-                </div>
-
-
-                <div class="campo">
-
-                    <label for="conteudo">
-                        Conteúdo *
-                    </label>
-
-                    <input
-                        id="conteudo"
-                        type="text"
-                        placeholder="Ex.: Frações">
-
-                </div>
-
-
-                <div class="campo">
-
-                    <label for="observacoes">
-                        Observações
-                    </label>
-
-                    <textarea
-                        id="observacoes"
-                        rows="4"
-                        placeholder="Ex.: prefere instruções curtas"></textarea>
-
-                </div>
-
-
-                <div id="erroConfiguracao"
-                     class="mensagem erro"
-                     hidden>
-                </div>
-
-
-                <button
-                    id="prepararBtn"
-                    class="btn principal-btn"
-                    onclick="iniciarAvaliacao()">
-
-                    Preparar avaliação
-
+                <button id="btnComecar" class="btn btn-principal">
+                    Começar avaliação
                 </button>
 
             </div>
 
-        </div>
+            <div class="numero-tela">01</div>
 
-    </section>
+        </section>
 
 
-    <!-- ================================================= -->
-    <!-- PREPARAÇÃO -->
-    <!-- ================================================= -->
+        <!-- =====================================================
+             TELA 2 — CONFIGURAÇÃO
+        ====================================================== -->
 
-    <section id="preparacao" class="tela">
+        <section id="configuracao" class="tela">
 
-        <div class="card centralizado">
+            <div class="pagina">
 
-            <div class="spinner"></div>
+                <div class="cabecalho-pagina">
+                    <span class="numero-tela">02</span>
 
-            <h2>
-                Preparando a avaliação
-            </h2>
+                    <h2>Configuração da avaliação</h2>
 
-            <p id="statusPreparacao">
-                A inteligência artificial está criando
-                atividades sobre o conteúdo informado.
-            </p>
-
-            <div class="etapas-preparacao">
-
-                <div id="statusEtapa1">
-                    01 — Criando atividades
+                    <p>
+                        Informe os dados necessários para personalizar
+                        as atividades.
+                    </p>
                 </div>
 
-                <div id="statusEtapa2">
-                    02 — Organizando estratégias
-                </div>
+                <form id="formAvaliacao">
 
-                <div id="statusEtapa3">
-                    03 — Preparando avaliação
-                </div>
+                    <div class="grid-form">
+
+                        <div class="campo campo-grande">
+                            <label for="nome">
+                                Nome do estudante
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                autocomplete="name"
+                                placeholder="Digite o nome"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="idade">
+                                Idade
+                            </label>
+
+                            <input
+                                type="number"
+                                id="idade"
+                                name="idade"
+                                min="1"
+                                max="100"
+                                placeholder="Ex.: 13"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="ano">
+                                Ano escolar
+                            </label>
+
+                            <input
+                                type="text"
+                                id="ano"
+                                name="ano"
+                                placeholder="Ex.: 7º ano"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo campo-grande">
+                            <label for="materia">
+                                Matéria <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="materia"
+                                name="materia"
+                                placeholder="Ex.: Ciências"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo campo-grande">
+                            <label for="conteudo">
+                                Conteúdo <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="conteudo"
+                                name="conteudo"
+                                placeholder="Ex.: Sistema Solar"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo campo-total">
+                            <label for="observacoes">
+                                Observações
+                            </label>
+
+                            <textarea
+                                id="observacoes"
+                                name="observacoes"
+                                rows="4"
+                                placeholder="Alguma informação que possa ajudar na personalização das atividades..."
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="erroConfiguracao"
+                        class="mensagem erro"
+                        hidden
+                    ></div>
+
+                    <button
+                        type="submit"
+                        id="btnPreparar"
+                        class="btn btn-principal"
+                    >
+                        Preparar avaliação
+                    </button>
+
+                </form>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================================================= -->
-    <!-- AVALIAÇÃO -->
-    <!-- ================================================= -->
+        <!-- =====================================================
+             TELA 3 — PREPARAÇÃO
+        ====================================================== -->
 
-    <section id="avaliacao" class="tela">
+        <section id="preparacao" class="tela">
 
-        <div class="avaliacao-container">
+            <div class="pagina pagina-centralizada">
 
-            <div class="barra-superior">
+                <span class="numero-tela">03</span>
 
-                <div>
+                <div class="icone-ia">IA</div>
 
-                    <span id="contador">
-                        Questão 1 de 24
-                    </span>
+                <h2>Preparando a avaliação</h2>
 
-                    <span
-                        id="estrategia"
-                        class="badge">
-                        Divisão em etapas
-                    </span>
+                <p id="textoPreparacao">
+                    A inteligência artificial está criando atividades
+                    sobre o conteúdo informado.
+                </p>
 
-                </div>
+                <div class="etapas-preparacao">
 
-                <span id="materiaAtual">
-                    -
-                </span>
+                    <div
+                        id="etapa1"
+                        class="etapa-preparacao ativa"
+                    >
+                        <span>01</span>
+                        <div>
+                            <strong>Criando atividades</strong>
+                            <small>Gerando questões sobre o conteúdo.</small>
+                        </div>
+                    </div>
 
-            </div>
+                    <div
+                        id="etapa2"
+                        class="etapa-preparacao"
+                    >
+                        <span>02</span>
+                        <div>
+                            <strong>Organizando estratégias</strong>
+                            <small>Separando as atividades por estratégia.</small>
+                        </div>
+                    </div>
 
-
-            <div class="barra-progresso">
-
-                <div id="progresso"></div>
-
-            </div>
-
-
-            <div class="card questao-card">
-
-                <div class="numero-questao">
-                    QUESTÃO
-                </div>
-
-                <h2 id="tituloQuestao">
-                    -
-                </h2>
-
-                <div
-                    id="objetivoQuestao"
-                    class="objetivo">
-                </div>
-
-                <div
-                    id="enunciado"
-                    class="enunciado">
-                </div>
-
-
-                <div
-                    id="apoioVisual"
-                    class="apoio-visual"
-                    hidden>
-                </div>
-
-
-                <div
-                    id="passos"
-                    class="passos"
-                    hidden>
-                </div>
-
-
-                <div
-                    id="alternativas"
-                    class="alternativas">
-                </div>
-
-
-                <div class="dificuldade-box">
-
-                    <label>
-                        Como você percebeu esta atividade?
-                    </label>
-
-                    <div class="dificuldades">
-
-                        <button
-                            type="button"
-                            class="dificuldade"
-                            data-valor="Fácil">
-                            Fácil
-                        </button>
-
-                        <button
-                            type="button"
-                            class="dificuldade"
-                            data-valor="Adequada">
-                            Adequada
-                        </button>
-
-                        <button
-                            type="button"
-                            class="dificuldade"
-                            data-valor="Difícil">
-                            Difícil
-                        </button>
-
+                    <div
+                        id="etapa3"
+                        class="etapa-preparacao"
+                    >
+                        <span>03</span>
+                        <div>
+                            <strong>Preparando avaliação</strong>
+                            <small>Finalizando a sequência de questões.</small>
+                        </div>
                     </div>
 
                 </div>
 
+                <div
+                    id="statusPreparacao"
+                    class="status-preparacao"
+                >
+                    Aguarde enquanto a IA prepara a avaliação...
+                </div>
+
+                <button
+                    id="btnIniciarExercicios"
+                    class="btn btn-principal"
+                    hidden
+                >
+                    Iniciar avaliação
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TELA 4 — AVALIAÇÃO
+        ====================================================== -->
+
+        <section id="avaliacao" class="tela">
+
+            <div class="avaliacao-container">
+
+                <div class="avaliacao-topo">
+
+                    <div>
+                        <span id="contador">
+                            Questão 1 de 24
+                        </span>
+
+                        <span
+                            id="estrategia"
+                            class="badge-estrategia"
+                        >
+                            Divisão em etapas
+                        </span>
+                    </div>
+
+                    <span id="progressoTexto">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="barra-progresso">
+                    <div
+                        id="progresso"
+                        class="barra-progresso-preenchida"
+                    ></div>
+                </div>
+
+
+                <article class="questao-card">
+
+                    <div class="questao-meta">
+                        <span>QUESTÃO</span>
+                    </div>
+
+                    <h2
+                        id="tituloQuestao"
+                        class="titulo-questao"
+                    >
+                        Preparando questão...
+                    </h2>
+
+                    <p
+                        id="objetivoQuestao"
+                        class="objetivo-questao"
+                    ></p>
+
+                    <div
+                        id="enunciado"
+                        class="enunciado"
+                    >
+                        Carregando...
+                    </div>
+
+
+                    <div
+                        id="passos"
+                        class="bloco-extra"
+                        hidden
+                    >
+                        <h3>Como resolver</h3>
+                        <ol id="listaPassos"></ol>
+                    </div>
+
+
+                    <div
+                        id="visual"
+                        class="bloco-extra"
+                        hidden
+                    >
+                        <h3>Apoio visual</h3>
+                        <div id="listaVisual"></div>
+                    </div>
+
+
+                    <div
+                        id="alternativas"
+                        class="alternativas"
+                    ></div>
+
+
+                    <div class="dificuldade-box">
+
+                        <label for="dificuldade">
+                            Como você percebeu esta atividade?
+                        </label>
+
+                        <div class="dificuldade-opcoes">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="dificuldade"
+                                    value="1"
+                                >
+                                <span>Fácil</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="dificuldade"
+                                    value="2"
+                                >
+                                <span>Adequada</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="dificuldade"
+                                    value="3"
+                                >
+                                <span>Difícil</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="feedback"
+                        class="feedback"
+                        hidden
+                    ></div>
+
+
+                    <div class="acoes-questao">
+
+                        <button
+                            id="btnResponder"
+                            class="btn btn-principal"
+                            disabled
+                        >
+                            Registrar resposta
+                        </button>
+
+                        <button
+                            id="btnProximo"
+                            class="btn btn-secundario"
+                            hidden
+                        >
+                            Próxima questão
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TELA 5 — ANÁLISE ADAPTATIVA
+        ====================================================== -->
+
+        <section id="adaptacao" class="tela">
+
+            <div class="pagina pagina-centralizada">
+
+                <div class="icone-ia">IA</div>
+
+                <h2>Analisando seu desempenho</h2>
+
+                <p>
+                    A NeurodivergêncIA está analisando as 18 atividades
+                    iniciais para preparar as atividades adaptativas.
+                </p>
+
+                <div class="loading-circle"></div>
 
                 <div
-                    id="feedback"
-                    class="feedback"
-                    hidden>
-                </div>
-
-
-                <div class="acoes">
-
-                    <button
-                        id="responderBtn"
-                        class="btn principal-btn"
-                        onclick="responderQuestao()">
-
-                        Registrar resposta
-
-                    </button>
-
-                    <button
-                        id="proximaBtn"
-                        class="btn secundario-btn"
-                        onclick="proximaQuestao()"
-                        hidden>
-
-                        Próxima questão
-
-                    </button>
-
+                    id="statusAdaptacao"
+                    class="status-preparacao"
+                >
+                    Analisando as respostas...
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================================================= -->
-    <!-- ADAPTAÇÃO -->
-    <!-- ================================================= -->
+        <!-- =====================================================
+             TELA 6 — RESULTADO
+        ====================================================== -->
 
-    <section id="adaptacao" class="tela">
+        <section id="resultado" class="tela">
 
-        <div class="card centralizado">
+            <div class="pagina">
 
-            <div class="icone pequeno">
-                IA
-            </div>
+                <div class="cabecalho-pagina">
 
-            <h2>
-                Analisando seu desempenho
-            </h2>
+                    <span class="numero-tela">04</span>
 
-            <p>
-                A NeurodivergêncIA está analisando as
-                18 atividades iniciais para preparar
-                as atividades adaptativas.
-            </p>
-
-            <div class="spinner"></div>
-
-            <p id="statusAdaptacao">
-                Criando as próximas atividades...
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================================================= -->
-    <!-- RESULTADO -->
-    <!-- ================================================= -->
-
-    <section id="resultado" class="tela">
-
-        <div class="card">
-
-            <div class="cabecalho-card">
-
-                <span class="numero-etapa">
-                    03
-                </span>
-
-                <div>
                     <h2>Resultado da avaliação</h2>
 
                     <p>
                         Análise do desempenho nas diferentes
                         estratégias pedagógicas.
                     </p>
+
+                </div>
+
+
+                <div
+                    id="relatorio"
+                    class="relatorio"
+                ></div>
+
+
+                <div class="acoes-resultado">
+
+                    <button
+                        id="btnAtividades"
+                        class="btn btn-principal"
+                    >
+                        Ver atividades adaptadas
+                    </button>
+
+                    <button
+                        id="btnReiniciar"
+                        class="btn btn-secundario"
+                    >
+                        Nova avaliação
+                    </button>
+
                 </div>
 
             </div>
 
-
-            <div
-                id="resultadoPrincipal"
-                class="resultado-principal">
-            </div>
+        </section>
 
 
-            <div
-                id="resultadosEstrategias"
-                class="resultados-estrategias">
-            </div>
+        <!-- =====================================================
+             TELA 7 — ATIVIDADES
+        ====================================================== -->
 
+        <section id="atividades" class="tela">
 
-            <div
-                id="resumoGeral"
-                class="resumo-geral">
-            </div>
+            <div class="pagina">
 
+                <div class="cabecalho-pagina">
 
-            <div class="acoes resultado-acoes">
+                    <span class="numero-tela">05</span>
 
-                <button
-                    class="btn principal-btn"
-                    onclick="mostrarAtividades()">
-
-                    Ver atividades adaptadas
-
-                </button>
-
-                <button
-                    class="btn secundario-btn"
-                    onclick="reiniciarSistema()">
-
-                    Nova avaliação
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================================================= -->
-    <!-- ATIVIDADES ADAPTADAS -->
-    <!-- ================================================= -->
-
-    <section id="atividades" class="tela">
-
-        <div class="card">
-
-            <div class="cabecalho-card">
-
-                <span class="numero-etapa">
-                    04
-                </span>
-
-                <div>
-                    <h2>
-                        Atividades adaptadas
-                    </h2>
+                    <h2>Atividades adaptadas</h2>
 
                     <p>
                         Atividades criadas a partir do desempenho
                         observado na avaliação.
                     </p>
+
                 </div>
 
-            </div>
 
+                <div
+                    id="listaAtividades"
+                    class="atividades-adaptadas"
+                ></div>
 
-            <div id="listaAtividades"></div>
-
-
-            <div class="acoes">
 
                 <button
-                    class="btn secundario-btn"
-                    onclick="reiniciarSistema()">
-
+                    id="btnNovaAvaliacao"
+                    class="btn btn-secundario"
+                >
                     Nova avaliação
-
                 </button>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
-
-</main>
+    </main>
 
 
-<footer>
-    NeurodivergêncIA — Tecnologia para uma aprendizagem mais personalizada
-</footer>
-
-
-<script src="script.js"></script>
+    <footer class="rodape">
+        NeurodivergêncIA — Tecnologia para uma aprendizagem mais personalizada
+    </footer>
 
 </body>
 </html>
